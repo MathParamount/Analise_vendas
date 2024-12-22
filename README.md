@@ -68,7 +68,7 @@ vendas = pd.concat(tabelas_vendas,ignore_index = False)
 devolucoes = pd.concat(tabelas_devolucao,ignore_index = False)
 ```
 
-1️⃣ DataFrame de Vendas
+### 1️⃣ DataFrame de Vendas
 
 Ordenação pela coluna Data em ordem crescente:
 ```
@@ -100,7 +100,7 @@ df_vendas1['Data'] = pd.to_datetime(df_vendas1['Data'],format = '%m/%d/%Y')
 df_vendas1.dtypes
 ```
 
-2️⃣ DataFrame de Devoluções
+### 2️⃣ DataFrame de Devoluções
 
 O mesmo tratamento foi aplicado ao DataFrame de devoluções:
 
@@ -168,7 +168,7 @@ Criação da coluna Faturamento
 geral['Faturamento'] = geral['Quantidade Vendida'] * geral['Preco Unitario']
 ```
 
-3️⃣ Visualização:
+### 3️⃣ Visualização:
 
 ```
 #Grafico de produto_vendido por preço_unitario
@@ -283,26 +283,29 @@ Ajuste das coordenadas e do mapa
 mapa
 ```
 
-## 🚲 Testes
-
 ## 💡 Explicações
 
 - Foi notado que criando dois arrays e separando os arquivos excel do tipo csv por nome e depois concatenando para transformar em dataframes se tornou muito mais simples e menos complexo o trabalho.
 
-- Na parte da verificação dos dados foi feito uma contagem das chaves únicas de cada dataset. Isso é feito com a função isin(), ou seja, foi feito um join para ter uma razão entre a quantidade de chaves primárias comuns com o total. Assim, podendo servir para explicar a quantidade de nan no dataset geral.
+- Na parte da verificação dos dados, que está em [DataFrame de Devoluções](### 2️⃣ DataFrame de Devoluções), foi feita uma contagem das chaves únicas de cada dataset. Isso é feito com a função isin(), ou seja, foi feito um join para ter uma razão entre a quantidade de chaves primárias comuns com o total. Assim, podendo servir para explicar a quantidade de nan no dataset geral.
 
-- A mesclagem feita chamada de geral dos 2 dataframes foi feita para facilitar a visualização dos dados e os tratamentos ao longo do código.
+- A mesclagem chamada de geral dos 2 dataframes foi feita para facilitar a visualização dos dados e os tratamentos ao longo do código.
 
-- Na parte de visualização foi escolhido o gráfico do tipo scatter(espalhamento) porque foi o único que encontrei que se adaptou a demanda visual de aumento de tamanho do dado conforme o faturamento.
+- Na parte de [Visualização](### 3️⃣ Visualização:) foi escolhido o gráfico do tipo scatter(espalhamento) porque foi o único que encontrei que se adaptou a demanda visual de aumento de tamanho do dado conforme o faturamento.
 
 - O objeto chamado legenda foi criado com o intuito de pôr detalhes no gráfico, assim, tornando mais intuitivo e detalhado.
 
-- A criação de coordenadas é essêncial para o uso da biblioteca folium para a criação do mapa interativo.
+- A criação de coordenadas é essêncial para o uso da biblioteca folium feita na [Instalação](## ⚒️ Instalação) para a criação do mapa interativo.
 
 - Na inicialização do mapa a coordenada foi escolhida como sendo [-13.6707, -52.6349]. Isso é devido a centralização no Brasil, pois os dados são restringidos ao Brasil.
 
+  ## 🧠 Hipóteses
+
+  1. Quando se filtra a tabela geral pelos produtos que teve maior faturamento revela que foi o Iphone em diversos estados brasileiros e em épocas do ano diferente. Assim, podendo ser um produto em potencial.
+  2. A cidade com maior faturamento foi Porto Alegre. Assim, pode ser que clientes em potências estão mais concentrados nessa região do país.
+
 ## 🚩 Conclusão
 
-Este projeto é ideal para praticar técnicas de análise de dados, visualização e tratamento de datasets. Além disso, os insights gerados a partir das métricas e gráficos podem ser adaptados a outros contextos empresariais.
+Por fim, este projeto foi ideal para praticar técnicas de análise de dados, visualização e tratamento de datasets. Além disso, os insights gerados a partir das métricas e gráficos podem ser adaptados a outros contextos empresariais. Contudo, há melhoras na que devem ser frisadas como a redução de redundâncias tanto na parte de faturamento e legenda quanto em uma simplicidade maior que poderia ser implantada no código, mas foi o que o autor conseguiu pensar na criação do projeto. Ademais, o projeto foi feito com sucesso e foi alcançado o resultado esperado.
 
 Contribuições e sugestões são bem-vindas!
