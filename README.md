@@ -168,7 +168,7 @@ Criação da coluna Faturamento
 geral['Faturamento'] = geral['Quantidade Vendida'] * geral['Preco Unitario']
 ```
 
-### 3️⃣ Visualização:
+### 3️⃣ Visualização
 
 ```
 #Grafico de produto_vendido por preço_unitario
@@ -287,15 +287,15 @@ mapa
 
 - Foi notado que criando dois arrays e separando os arquivos excel do tipo csv por nome e depois concatenando para transformar em dataframes se tornou muito mais simples e menos complexo o trabalho.
 
-- Na parte da verificação dos dados, que está em [DataFrame de Devoluções](### 2️⃣ DataFrame de Devoluções), foi feita uma contagem das chaves únicas de cada dataset. Isso é feito com a função isin(), ou seja, foi feito um join para ter uma razão entre a quantidade de chaves primárias comuns com o total. Assim, podendo servir para explicar a quantidade de nan no dataset geral.
+- Na parte da verificação dos dados, que está em [DataFrame de devoluções](#2️⃣-DataFrame-de-Devoluções), foi feita uma contagem das chaves únicas de cada dataset. Isso é feito com a função isin(), ou seja, foi feito um join para ter uma razão entre a quantidade de chaves primárias comuns com o total. Assim, podendo servir para explicar a quantidade de nan no dataset geral.
 
 - A mesclagem chamada de geral dos 2 dataframes foi feita para facilitar a visualização dos dados e os tratamentos ao longo do código.
 
-- Na parte de [Visualização](### 3️⃣ Visualização:) foi escolhido o gráfico do tipo scatter(espalhamento) porque foi o único que encontrei que se adaptou a demanda visual de aumento de tamanho do dado conforme o faturamento.
+- Na parte de Na parte de [Visualização](#3️⃣-visualização) foi escolhido o gráfico do tipo scatter(espalhamento) porque foi o único que encontrei que se adaptou a demanda visual de aumento de tamanho do dado conforme o faturamento.
 
 - O objeto chamado legenda foi criado com o intuito de pôr detalhes no gráfico, assim, tornando mais intuitivo e detalhado.
 
-- A criação de coordenadas é essêncial para o uso da biblioteca folium feita na [Instalação](## ⚒️ Instalação) para a criação do mapa interativo.
+- A criação de coordenadas é essêncial para o uso da biblioteca folium feita na [Instalação](#Instalação) para a criação do mapa interativo.
 
 - Na inicialização do mapa a coordenada foi escolhida como sendo [-13.6707, -52.6349]. Isso é devido a centralização no Brasil, pois os dados são restringidos ao Brasil.
 
